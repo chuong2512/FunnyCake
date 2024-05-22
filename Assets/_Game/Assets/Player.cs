@@ -89,6 +89,7 @@ public class Player : Singleton<Player>
     [Button]
     public void Jump()
     {
+        MasterAudioManager.Play2DSfx(AudioConst.Jump);
         isJumping = true;
         collider.isTrigger = true;
         rigidbody2D.AddForce(Vector2.up * force);

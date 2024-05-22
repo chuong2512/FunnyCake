@@ -30,6 +30,7 @@ public class GameUI : Singleton<GameUI>
     public void ShowLose()
     {
         Manager.InGame.Lose();
+        MasterAudioManager.Play2DSfx(AudioConst.Lose);
     }
 
     public float countTime;

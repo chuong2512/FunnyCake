@@ -9,5 +9,6 @@ public class heart : MonoBehaviour
     {
         Data.Player.Gem++;
         gameObject.SetActive(false);
+        MasterAudioManager.Play2DSfx(AudioConst.Point);
     }
 }
