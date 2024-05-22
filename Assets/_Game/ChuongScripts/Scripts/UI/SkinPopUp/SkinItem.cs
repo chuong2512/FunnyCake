@@ -11,7 +11,7 @@ namespace ChuongCustom
         [SerializeField] private Image icon;
         [SerializeField] private TextMeshProUGUI priceText;
         [SerializeField] private GameObject tick;
-        
+
         private int _id;
         private SkinData _skinData;
 
@@ -49,6 +49,7 @@ namespace ChuongCustom
 
         public void OnClick()
         {
+            MasterAudioManager.Play2DSfx(AudioConst.ClickSound);
             if (Data.Player.skinUnlocks[_id] > 0)
             {
                 if (Data.Player.currentSkin == _id)
