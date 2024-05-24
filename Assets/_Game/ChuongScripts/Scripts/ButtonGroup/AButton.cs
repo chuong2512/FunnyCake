@@ -22,6 +22,7 @@ namespace ChuongCustom
         private void Start()
         {
             SetListener(OnClickButton);
+            _button.onClick.AddListener(MasterAudioManager.ClickSound);
             OnStart();
         }
 
