@@ -10,7 +10,7 @@ public class PlayButton : AButton
 
     protected override void OnClickButton()
     {
-        if (Data.Player.time > 0 || CheckRegister)
+        if (Data.Player.time > 0 || !CheckRegister)
         {
             SceneManager.LoadScene("GameScene");
         }

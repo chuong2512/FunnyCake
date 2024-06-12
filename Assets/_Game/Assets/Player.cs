@@ -37,7 +37,6 @@ public class Player : Singleton<Player>
     {
         if (GameUI.Instance.currentState != State.Stop)
         {
-#if UNITY_EDITOR
             Vec = transform.localPosition;
             Vec.x += Input.GetAxis("Horizontal") * Time.deltaTime * speed;
 
@@ -52,24 +51,6 @@ public class Player : Singleton<Player>
             }
 
             transform.localPosition = Vec;
-
-
-#elif UNITY_ANDROID
-           Vec = transform.localPosition;
-            Vec.x += Input.acceleration.x * Time.deltaTime * speed;
-
-            if (Vec.x >= CheckRight)
-            {
-                Vec.x = CheckRight;
-            }
-
-            if (Vec.x <= CheckLeft)
-            {
-                Vec.x = CheckLeft;
-            }
-
-            transform.localPosition = Vec;
-#endif
         }
 
 
